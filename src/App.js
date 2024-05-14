@@ -1,4 +1,5 @@
 import Header from './Components/Header/Header.jsx';
+import DrawerLeft from './Components/Drawer/Drawer.jsx';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         <Header/>
       </header>
+      <DrawerLeft />
     </div>
   );
 }
