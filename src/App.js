@@ -11,8 +11,14 @@ function App() {
       <header className="App-header">
         <Header/>
       </header>
-      <DrawerLeft />
-      <RetailerPage/>
+      <div className='app-main'>
+         <div className='app-sidebar'>
+          <DrawerLeft />
+         </div>
+         <div className='app-main-content'>
+            <RetailerPage/>
+         </div>
+      </div>
     </div>
     </ThemeProvider>
    
