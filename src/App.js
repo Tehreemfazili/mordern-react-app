@@ -1,9 +1,13 @@
 import Header from './Components/Header/Header.jsx';
 import DrawerLeft from './Components/Drawer/Drawer.jsx';
+import RetailerPage from './Pages/Retailer/Retailer.tsx';
+import { ThemeProvider } from '@mui/material';
+import { theme } from './CustomTheme/ModernAppTheme.tsx';
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
+       <div className="App">
       <header className="App-header">
         <Header/>
       </header>
@@ -12,9 +16,12 @@ function App() {
           <DrawerLeft />
          </div>
          <div className='app-main-content'>
+            <RetailerPage/>
          </div>
       </div>
     </div>
+    </ThemeProvider>
+   
   );
 }
 
