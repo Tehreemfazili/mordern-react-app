@@ -7,7 +7,13 @@ function App() {
       <header className="App-header">
         <Header/>
       </header>
-      <DrawerLeft />
+      <div className='app-main'>
+         <div className='app-sidebar'>
+          <DrawerLeft />
+         </div>
+         <div className='app-main-content'>
+         </div>
+      </div>
     </div>
   );
 }
