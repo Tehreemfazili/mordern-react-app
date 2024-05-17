@@ -15,7 +15,7 @@ import { ArrowRight, Close, Download, Error, PersonOutlineOutlined} from '@mui/i
 export default function DrawerLeft() {
   return (
     <Drawer sx={{ '& .MuiPaper-root': { overflow: 'visible', backgroundColor: 'rgb(216, 191, 216, 0.25)' } }} variant="permanent" anchor="left" className='drawer'>
-      <Toolbar className='drawer-toolbar' sx={{ width: '100%'}}>
+      <Toolbar className='drawer-toolbar' sx={{ width: '100%' , backgroundColor: 'primary'}}>
         <IconButton> <PersonOutlineOutlined/> </IconButton> | <div className='logout-btn'>Logout</div>
         <IconButton sx={{ marginLeft: 'auto', backgroundColor: 'rgb(216, 191, 216, 0.25)', padding: '8px', position: 'absolute', right: '13px', borderRadius: '0 100% 100% 0'}}> <Close /> </IconButton>
       </Toolbar>
@@ -23,7 +23,7 @@ export default function DrawerLeft() {
         {['Dashboard', 'Retailers', 'Always On', 'Event', 'Resources', 'Messages', 'Bookings'].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: 'flex', alignItems: 'center' }}>
             <div  className='drawer-item-wrapper' >
-              <ListItemButton sx={{ padding: '8px 0'}}>
+              <ListItemButton sx={{ padding: '8px 0'}} >
                 <ListItemText primary={text} />
               </ListItemButton>
               <Divider style={{width:'100%'}} />  
