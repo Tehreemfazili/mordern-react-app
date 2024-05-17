@@ -3,6 +3,7 @@ import DrawerLeft from './Components/Drawer/Drawer.jsx';
 import RetailerPage from './Pages/Retailer/Retailer.tsx';
 import { ThemeProvider } from '@mui/material';
 import { theme } from './CustomTheme/ModernAppTheme.tsx';
+import './App.scss'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Header/>
       </header>
       <div className='app-main'>
-         <div className='app-sidebar'>
+         <div className='app-main-sidebar'>
           <DrawerLeft />
          </div>
          <div className='app-main-content'>
