@@ -1,9 +1,10 @@
 import Header from './Components/Header/Header.jsx';
 import DrawerLeft from './Components/Drawer/Drawer.jsx';
-import RetailerPage from './Pages/Retailer/Retailer.tsx';
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
 import { theme } from './CustomTheme/ModernAppTheme.tsx';
 import './App.scss'
+import DrawerRoutes from './Components/Drawer/DrawerRoutes.tsx';
 
 function App() {
   return (
@@ -12,14 +13,17 @@ function App() {
       <header className="App-header">
         <Header/>
       </header>
-      <div className='app-main'>
-         <div className='app-main-sidebar'>
-          <DrawerLeft />
-         </div>
-         <div className='app-main-content'>
-            <RetailerPage/>
-         </div>
-      </div>
+      <BrowserRouter>
+        <div className='app-main'>
+          <div className='app-main-sidebar'>
+            <DrawerLeft/>
+          </div>
+          <div className='app-main-content'>
+            <DrawerRoutes/>
+          </div>
+        </div>
+      </BrowserRouter>
+         
     </div>
     </ThemeProvider>
    

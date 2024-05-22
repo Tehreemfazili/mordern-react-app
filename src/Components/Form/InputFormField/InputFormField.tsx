@@ -4,7 +4,7 @@ import React from 'react'
 import { FormInputProps } from "../FormInputProps/FormInputProps.tsx";
 
 
-export const InputFormField = ({ name, control, label, id }: FormInputProps) => {
+export const InputFormField = ({ name, control, label, id, errorValue, errorMessage, pattern }: FormInputProps) => {
   return (
     <Controller
       name={name}
@@ -28,6 +28,8 @@ export const InputFormField = ({ name, control, label, id }: FormInputProps) => 
 
         />
       )}
+      rules={{ required: { value: errorValue, message: errorMessage }, pattern: {value: /^\S+@\S+$/i, message: "errorMessage validation"}}}
+      
     />
   );
 };
