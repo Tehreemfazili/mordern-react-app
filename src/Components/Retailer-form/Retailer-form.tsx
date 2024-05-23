@@ -1,31 +1,45 @@
 import { Button, TextField, Typography, useFormControl } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import './Retailer-form.scss';
 import { InputFormField } from '../Form/InputFormField/InputFormField.tsx';
 import { FormCheckBox } from '../Form/Checkbox/FormCheckbox.tsx';
 import { FormDatePicker } from '../DatePicker/FormDatePicker.tsx';
+import { RetailerFormInput } from './Retailer.tsx';
+import { AddRetailer } from './AddRetailer.tsx';
+import { BASE_URL } from '../../Utils/BASE_URL.tsx';
 
-interface RetailerFormInput {
-  name: string
-  email: string
-  address: string
-  postal: string
-  iceCreamType: { label: string; value: string }
-}
+
 
 export default function RetailerForm() {
   const { register, handleSubmit,control, setValue, watch, formState: { errors } } = useForm<RetailerFormInput>();
+  const [retailers, setRetailers] = useState<RetailerFormInput[]>([]);
 
-  const onSubmit: SubmitHandler<RetailerFormInput> = data => {
-    
-  };
+  const onSubmit : SubmitHandler<RetailerFormInput> = async (data : RetailerFormInput)  => {
+
+    try {
+      await fetch(`${BASE_URL}/register-retailer`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setRetailers(data);
+        });
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error.message);
+    };
+  }
 
   return  (
-    <form onSubmit={handleSubmit(onSubmit)} className='retailer-form'>
+        <form onSubmit={handleSubmit(onSubmit)} className='retailer-form'>
       <Typography variant='h4'> Details</Typography>
       <InputFormField id="retailer-name" name= "Name" label="Name" control={control}/>
-      <InputFormField id="retailer-email" name= "Email" label="Email" control={control}/>
+      <InputFormField id="retailer-email" name= "Email" label="Email" control={control} errorValue={true} errorMessage={"Email is required"} pattern= '/^\S+@\S+$/i' />
       <div className='form-email-address'>
         <InputFormField id="retailer-form-email" name= "Form-email" label="Form Email" control={control}/>
         <FormCheckBox id='confirm-form-email'  control={control} setValue={setValue} name={"checkboxValue"} label={"Checkbox Input"} />

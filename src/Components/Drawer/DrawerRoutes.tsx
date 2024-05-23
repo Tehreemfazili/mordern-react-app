@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import RetailerPage from '../../Pages/Retailer/Retailer.tsx';
 import Dashboard from '../../Pages/Dashboard/Dashboard.tsx';
+import RetailerPage from '../../Pages/Retailer/Retailer.tsx';
 
 
 const DrawerRoutes = () => {
@@ -9,7 +9,7 @@ const DrawerRoutes = () => {
     <>
       <Routes>
         <Route path="/" element={<Dashboard />} />;
-        <Route path="/retailers" element={<RetailerPage />} />;
+        <Route path="/retailers" element={<RetailerPage/>} />;
         <Route path="/add-retailer" element={<Dashboard />} />;
         <Route path="/retailers-list" element={<Dashboard />} />;
         <Route path="/always-on" element={<Dashboard />} />;
