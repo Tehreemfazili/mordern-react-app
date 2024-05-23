@@ -18,7 +18,7 @@ app.get("/register-retailer", (req, res) => {
 
 
 app.post("/register-retailer", (req, res) => {
-  const { Name, Email } = req.body;
+  const { Name, Email, Address, Postal } = req.body;
 
   const retailersData = fs.readFileSync("retailers.json");
 
@@ -30,7 +30,7 @@ app.post("/register-retailer", (req, res) => {
       .status(201)
       .json({ message: "Already registered! Please try another email" });
   } else {
-    const newRetailer = { Name, Email };
+    const newRetailer = { Name, Email, Address, Postal };
     retailers.push(newRetailer);
 
     // Convert the updated array back to JSON
@@ -40,13 +40,13 @@ app.post("/register-retailer", (req, res) => {
     fs.writeFileSync("retailers.json", updatedretailersData);
 
     // Send a response indicating successful registration
-    res.status(200).json({ message: "Retailer registered successfully" });
+    res.status(200).json({ Name, Email, Address, Postal } );
   }
 });
 
 function checkRetailer(email, retailersData) {
   const retailer = retailersData.find(
-    (u) => u.email === email
+    (u) => u.Email === email
   );
   return retailer ? true : false;
 }

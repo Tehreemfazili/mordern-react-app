@@ -7,4 +7,5 @@ export interface FormInputProps {
   errorValue?: any;
   errorMessage?: any;
   pattern? :any;
+  validationErrorMessage?: any; 
 }
