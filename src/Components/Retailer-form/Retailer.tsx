@@ -3,11 +3,11 @@ export type RetailerFormInputGeneric<Retailer> = {
 }
 
 export type RetailerFormInput = {
-  name : String,
-  email : String,
+  Name : String,
+  Email : String,
   formEmail : String,
-  address : String,
-  postal : String,
+  Address : String,
+  Postal : String,
 }
 
 export type Retailers = {

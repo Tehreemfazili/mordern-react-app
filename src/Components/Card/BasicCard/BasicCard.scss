@@ -1,0 +1,14 @@
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item {
+    background: #fff;
+    padding: 23px;
+    border-radius: 4px;
+    margin: 14px;
+    color: #363636;
+    width: calc(33% - 84px);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+}
