@@ -19,7 +19,6 @@ export default function DrawerLeft() {
   const [openItems, setOpenItems] = useState({});
 
   const handleItemClick = (link) => {
-    console.log(link);
   };
 
   const handleSubItemClick = (name) => {
@@ -27,7 +26,6 @@ export default function DrawerLeft() {
       ...prevOpenItems,
       [name]: !prevOpenItems[name],
     }));
-    // console.log("openItems",openItems)
     setOpen(!open)
   };
 

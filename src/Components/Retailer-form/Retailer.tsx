@@ -11,5 +11,5 @@ export type RetailerFormInput = {
 }
 
 export type Retailers = {
-  data: RetailerFormInput[] | null;
+  data: RetailerFormInput[];
 }

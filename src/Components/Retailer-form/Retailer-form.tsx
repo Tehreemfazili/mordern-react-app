@@ -76,7 +76,6 @@ export default function RetailerForm() {
     <Button type="submit" >Add Retailer</Button>
     {openAlertDialog && <AlertDialog openAlertDialog={openAlertDialog} onAlertClose= {handleAlertDialogClose} retailer={retailers} onContinue={onContinue}/>}
     {responseData && <BasicModal openModal= {openModal} onModalClose = {handleModelClose}/>}
-    <Link to='/retailers-list'>GET RETAILERS LIST</Link>
   </form>
   );
 }

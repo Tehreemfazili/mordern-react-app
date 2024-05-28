@@ -1,7 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from '../../Pages/Dashboard/Dashboard.tsx';
 import RetailerPage from '../../Pages/Retailer/Retailer.tsx';
+import RetailerForm from '../Retailer-form/Retailer-form.tsx';
+import Dashboard from '../../Pages/Dashboard/Dashboard.tsx';
+import { RetailersList } from '../Retailer-form/RetailersList.tsx';
 
 
 const DrawerRoutes = () => {
@@ -9,9 +11,8 @@ const DrawerRoutes = () => {
     <>
       <Routes>
         <Route path="/" element={<Dashboard />} />;
-        <Route path="/retailers" element={<RetailerPage/>} />;
-        <Route path="/add-retailer" element={<Dashboard />} />;
-        <Route path="/retailers-list" element={<Dashboard />} />;
+        <Route path="/add-retailer" element={<RetailerForm />} />;
+        <Route path="/retailers-list" element={<RetailersList />} />;
         <Route path="/always-on" element={<Dashboard />} />;
         <Route path="/recent-events" element={<Dashboard />} />;
         <Route path="/resources" element={<Dashboard />} />;
