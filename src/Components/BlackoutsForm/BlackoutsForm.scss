@@ -1,0 +1,19 @@
+.blackout-dates, .blackout-time{
+  display: flex;
+  margin-bottom: 32px;
+
+  .MuiStack-root{
+    margin-right: 20px;
+
+    .MuiTextField-root {
+      min-width: 274px;
+    }
+  }
+}
+
+.blackout-detail-wrapper {
+  border: 1px solid rgb(216, 191, 216);
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin: 32px 0;
+}

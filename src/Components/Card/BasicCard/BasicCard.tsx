@@ -8,7 +8,7 @@ export  const BasicCard: FC<Retailers> = ({data}) => {
   return (
     <div className="card-wrapper">
      {data.map((retailer) =>  (
-    
+      
         <Card className="card-wrapper-item">
           
           <CardContent>
@@ -27,7 +27,7 @@ export  const BasicCard: FC<Retailers> = ({data}) => {
           </CardActions>
           
         </Card>
-        
+                
       ))}
     </div>
    

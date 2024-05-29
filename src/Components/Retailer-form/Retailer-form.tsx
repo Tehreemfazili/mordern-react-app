@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import './Retailer-form.scss';
 import { InputFormField } from '../Form/InputFormField/InputFormField.tsx';
-import { FormDatePicker } from '../DatePicker/FormDatePicker.tsx';
 import { RetailerFormInput } from './Retailer.tsx';
 import { BASE_URL } from '../../Utils/BASE_URL.tsx';
 import AlertDialog from '../Modals/Dialogs/AlertDialog.tsx';

@@ -32,9 +32,14 @@ export const DrawerItems = [
     'name' : 'Resources', 
     'link' : '/resources',
     'subItem' : [ {
+      'name' : 'Models',
+      'link' : '/models'
+    },
+    {
       'name' : 'Add recources',
       'link' : '/add-resources'
-    }]
+    }
+  ]
   },
   {
     'name' : 'Messages', 
