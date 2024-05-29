@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from '@mui/material';
 import { theme } from './CustomTheme/ModernAppTheme.tsx';
 import './App.scss'
+import '../src/styles/base/base.scss'
+import '../src/styles/buttons/buttons.scss'
 import DrawerRoutes from './Components/Drawer/DrawerRoutes.tsx';
 
 function App() {

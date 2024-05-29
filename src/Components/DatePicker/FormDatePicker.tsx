@@ -1,37 +1,17 @@
-import React from "react";
-import DateFnsUtils from "@date-io/date-fns";
-// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import DatePicker from '@mui/lab/DatePicker';
-import LocalizationProvider from '@mui/lab/LocalizationProvider'
-import { Controller, useFormContext } from "react-hook-form";
-import { FormInputProps } from "../Form/FormInputProps/FormInputProps";
+import * as React from 'react';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import dayjs from 'dayjs';
 
-const DATE_FORMAT = "dd-MMM-yy";
 
-export const FormDatePicker = ({ name, control, label, id }: FormInputProps) => {
+export default function FormDatePicker({label}) {
   return (
-    <LocalizationProvider>
-      <Controller
-        name={name}
-        control={control}
-        render={({ field, fieldState, formState }) => (
-          <DatePicker
-            fullWidth
-            variant="inline"
-            defaultValue={new Date()}
-            id={`date-${Math.random()}`}
-            label={label}
-            rifmFormatter={(val) => val.replace(/[^[a-zA-Z0-9-]*$]+/gi, "")}
-            refuse={/[^[a-zA-Z0-9-]*$]+/gi}
-            autoOk
-            KeyboardButtonProps={{
-              "aria-label": "change date",
-            }}
-            format={DATE_FORMAT}
-            {...field}
-          />
-        )}
-      />
+    <LocalizationProvider dateAdapter={AdapterDayjs} >
+      <DemoContainer components={['DatePicker']}>
+        <DatePicker defaultValue={dayjs(new Date())} label={label} format="MMM DD, YYYY" slotProps={{ textField: { variant: 'standard', } }} />
+      </DemoContainer>
     </LocalizationProvider>
   );
-};
+}

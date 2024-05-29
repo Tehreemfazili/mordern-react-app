@@ -4,6 +4,7 @@ import RetailerPage from '../../Pages/Retailer/Retailer.tsx';
 import RetailerForm from '../Retailer-form/Retailer-form.tsx';
 import Dashboard from '../../Pages/Dashboard/Dashboard.tsx';
 import { RetailersList } from '../Retailer-form/RetailersList.tsx';
+import ResourcesModal from '../../Pages/Resources/ResourcesModal/ResourcesModal.tsx';
 
 
 const DrawerRoutes = () => {
@@ -15,7 +16,7 @@ const DrawerRoutes = () => {
         <Route path="/retailers-list" element={<RetailersList />} />;
         <Route path="/always-on" element={<Dashboard />} />;
         <Route path="/recent-events" element={<Dashboard />} />;
-        <Route path="/resources" element={<Dashboard />} />;
+        <Route path="/models" element={<ResourcesModal />} />;
         <Route path="/add-resources" element={<Dashboard />} />;
         <Route path="/recent-events" element={<Dashboard />} />;
       </Routes>
