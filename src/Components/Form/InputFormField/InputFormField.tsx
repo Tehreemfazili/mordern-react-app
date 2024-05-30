@@ -18,8 +18,8 @@ export const InputFormField = ({ name, control, label, id, errorValue, errorMess
           helperText={error ? error.message : null}
           size="small"
           error={!!error}
-          onChange={setEmail ? (e) => setEmail(e.target.value) : onChange}
-          value={email ? email : value}
+          onChange={onChange}
+          value={setEmail ? setEmail(value) : value}
           fullWidth
           id = {id}
           label={label}
