@@ -2,6 +2,7 @@ import React from 'react'
 import BlackoutsForm from '../../../Components/BlackoutsForm/BlackoutsForm.tsx'
 import { Typography } from '@mui/material'
 import ResourceForm from '../../../Components/RescourceForm/ResourceForm.tsx'
+import Imagery from '../../../Components/Imagery/Imagery.tsx'
 
 export default function ResourcesModal() {
   return (
@@ -11,6 +12,7 @@ export default function ResourcesModal() {
       <Typography variant='h4'>Description</Typography>
       <ResourceForm/>
       <BlackoutsForm/>
+      <Imagery/>
     </div>
   )
 }
