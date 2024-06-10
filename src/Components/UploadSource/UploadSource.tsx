@@ -20,7 +20,6 @@ const VisuallyHiddenInput = styled('input')({
 export default function UploadSource({setFile}) {
 
   const handleChange = (event) => {
-    console.log(event.target.files[0])
     setFile(URL.createObjectURL(event.target.files[0]));
   }
 

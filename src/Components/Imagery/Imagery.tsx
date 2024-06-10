@@ -25,8 +25,8 @@ export default function Imagery() {
             <FormControlLabel value="Add Source URL" control={<Radio />} label="Add Source URL" />
           </RadioButtonsGroup>
         </div>
-        {value === 'Upload' ? <UploadSource setFile={setFile}/> :  <AddSource/>}
-        <ImagePreview file={file}/>  
+        {value === 'Upload' ? <UploadSource setFile={setFile}/> :  <AddSource setFile={setFile}/>}
+        <ImagePreview file={file} setFile={setFile}/>  
         <TextField id='alt-text' name='Alt Text' label='Alt Text' size="small" variant="outlined"sx={{ margin: '20px 0', width: '100%'}}
           />
       </div>
