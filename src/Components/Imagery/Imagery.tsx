@@ -17,7 +17,6 @@ export default function Imagery() {
 
   return (
     <div className='imagery-wrapper'>
-      <Typography variant='h5'>Imagery</Typography>
       <div className='imagery-wrapper-content'>
         <div>
           <RadioButtonsGroup label={'Image source content'} handleChange={handleChange} value={value}>
