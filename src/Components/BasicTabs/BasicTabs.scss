@@ -1,0 +1,20 @@
+.tabs-wrapper{
+  .MuiTabs-flexContainer{
+    display: flex;
+  
+    .primary-btn-outlined {
+      padding: 18px 52px;
+      margin-right: 30px;
+  
+      &.Mui-selected {
+        background-color: rgb(216, 191, 216);
+        color: black;
+      }
+  
+    } 
+  } 
+  
+  .MuiTabs-indicator {
+    display: none;
+  }
+}

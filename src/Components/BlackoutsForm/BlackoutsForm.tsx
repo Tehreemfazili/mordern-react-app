@@ -17,8 +17,6 @@ export default function BlackoutsForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='retailer-form'>
-      <Typography variant='h3'>Blackouts</Typography>
-      <Typography variant='h5'>Add a period where bookings are not availableEG bank holidays or early closure</Typography>
       <div className='blackout-detail-wrapper'>
         <div>
           <InputFormField id="retailer-name" name= "Name" label="Resource Name" control={control} errorValue={true} errorMessage={"Name is required"}/>

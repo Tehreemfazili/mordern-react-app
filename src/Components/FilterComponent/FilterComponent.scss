@@ -1,0 +1,19 @@
+.filter-component {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 22px;
+  margin: 32px 0;
+  width: fit-content;
+  align-items: center;
+
+  &-sort, &-filter {
+    display: flex;
+    align-items: center;
+    margin: 0px 22px;
+  }
+
+  .MuiTextField-root {
+    margin: 0px 12px;
+  }
+}
