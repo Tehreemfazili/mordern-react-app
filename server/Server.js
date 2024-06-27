@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.get("/register-retailer", (req, res) => {
+app.get("/registered-retailer-list", (req, res) => {
   res.json(JSON.parse(fs.readFileSync("retailers.json")));
 });
 

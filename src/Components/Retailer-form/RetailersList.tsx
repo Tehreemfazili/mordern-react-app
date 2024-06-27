@@ -7,7 +7,7 @@ export const RetailersList: FC = () => {
   const [retailers, setRetailers] = useState<RetailerFormInput[]>([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/retailer-list`)
+    fetch(`${BASE_URL}/registered-retailer-list`)
       .then((res) => res.json())
       .then((data) => setRetailers(data))
       .catch((error) => console.error("Error fetching JSON data:", error));
